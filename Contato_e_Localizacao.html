@@ -51,26 +51,21 @@
 	
 		<img style="z-index: 2; position: relative; width:81.15%; height:200px;transform: translateX(11%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
 		
-		<h1 style="font-family: Monotype Corsiva; color: orangered; margin-left: 150px; margin-top: 150px;"> Sociedade Espírita Francisco de Assis: </p>
-		<h2 style="font-family: Monotype Corsiva; color: black; margin-left: 200px; top: 350px;"> Endereço: Rua Gaurama, 320 <br> Bairro: Cavalhada </p>
+		<p style="font-family: arial; color: darkorange; font-size: 22px; color: DarkOrange; text-align: center;"> Sociedade Espírita Francisco de Assis (SEFA) </p><br>
+		<p style="font-family: arial; font-size: 20px; color: darkorange; text-align: center;"> Endereço: Rua Gaurama, 320 / Bairro: Cavalhada </p>
 		<!--  -->  
-		<iframe style="z-index:1;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5614.180986348322!2d-51.231981076058226!3d-30.099673491189865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519825d8d3b75c1%3A0xf7efb07e7117d416!2sR.+Gaurama%2C+320+-+Cavalhada%2C+Porto+Alegre+-+RS%2C+91740-210!5e1!3m2!1spt-BR!2sbr!4v1535055489494" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-		
-		<p style="font-family: times new roman; font-size: 20px; padding-left: 0px; padding-top: 50px;"> Para entrar em contato com a SEFA, preencha os campos abaixo: </p>
+		<iframe style="z-index:1; float: left; width: 30%; margin-left: 10%; height: 300px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5614.180986348322!2d-51.231981076058226!3d-30.099673491189865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519825d8d3b75c1%3A0xf7efb07e7117d416!2sR.+Gaurama%2C+320+-+Cavalhada%2C+Porto+Alegre+-+RS%2C+91740-210!5e1!3m2!1spt-BR!2sbr!4v1535055489494" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		
 		<div class="formulario_contato">
 			<form action="index.php" method="post" name="Contato">
-				<fieldset>				
+				<fieldset style="height: 250px;">				
 					<legend style="color: orangered;"> Contato </legend>
-					<p> Nome: <input type="text" name="Nome"/> </p>
-					<p> Email: <input type="text" name="Email"/> </p>
-					<p> Mensagem: <textarea name="Mensagem" cols="30" rows="5"  maxlength="600" ></textarea>
-
+					Nome: <input type="text" name="Nome"/> 
+					<br><br> 
+					Email: <input type="text" name="Email"/> <br> <br> Mensagem: <br><textarea name="Mensagem" cols="30" rows="5"  maxlength="600" placeholder= "Deixe sua mensagem aqui"></textarea>
+					<br> <input type="submit" name="botaoEnviarFormulario" value="Enviar"/>
 				</fieldset>
 				
-				<br>
-				
-				<input type="submit" name="botaoEnviarFormulario" value="Enviar"/>
 			</form>
 		</div>
 
