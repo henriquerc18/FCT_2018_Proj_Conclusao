@@ -8,11 +8,10 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8" keywords="html5" authors="Henrique Rosa Carvalho, Gabriel Suterio Pereira da Silva" />
-		<link rel="stylesheet" href="validar.php" "captcha.php">
 	</head>
 	<body>
 		
-		<img src="captcha.php?largura=150&altura=50&tamanho_fonte=20&quantidade_letras=5">
+		<img src="captcha.php?l=150&a=50&tf=20&ql=5">
 		
 		<form action="validar.php" name="form" method="post">
 		   <input type="text" name="palavra"  />

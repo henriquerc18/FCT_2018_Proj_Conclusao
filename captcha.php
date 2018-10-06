@@ -4,13 +4,6 @@
 <!-- Nome: Henrique Rosa Carvalho e Gabriel Suterio Pereira da Silva -->
 <!-- Data: 03/08/2018 -->
 
-<!DOCTYPE HTML>
-<html lang="pt-br">
-	<head>
-		<meta charset="utf-8" keywords="html5" authors="Henrique Rosa Carvalho, Gabriel Suterio Pereira da Silva" />
-		<link rel="stylesheet" href="validar.php" "captcha.php">
-	</head>
-	<body>
 
 		<?php
 		   session_start(); // inicial a sessao
@@ -39,5 +32,4 @@
 			captcha($largura,$altura,$tamanho_fonte,$quantidade_letras); // executa a funcao captcha passando os parametros recebidos
 		?>
 		
-	</body>
-</html>
+

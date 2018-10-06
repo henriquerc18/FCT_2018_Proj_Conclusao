@@ -8,7 +8,6 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8" keywords="html5" authors="Henrique Rosa Carvalho, Gabriel Suterio Pereira da Silva" />
-		<link rel="stylesheet" href="validar.php" "captcha.php">
 	</head>
 	<body>
 
