@@ -1,6 +1,6 @@
-body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;}
+/* body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;}*/
 
- body { 
+body { 
 	 background: -webkit-linear-gradient(#ffdb99, white); 
 	 background: -moz-linear-gradient(#ffdb99, white); 
 	 background: -o-linear-gradient(#ffdb99, white); 
@@ -11,16 +11,7 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
 	 margin: 30px 40px 10px 30px; 
  }	 
 	
-	.SEFA_Titulo {
-		font-family: Monotype Corsiva;
-		font-size: 80px;
-		left: 425px;
-		position: absolute;
-	    z-index: 2;
-		top: 35px;
-	}
-	
-	nav.menu {
+nav.menu {
 		background: ;
 		position: absolute;
 		z-index: 2;
@@ -78,5 +69,3 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
 .login-form .btn.btn-primary.reset {
   background: #ff9900 none repeat scroll 0 0;
 }
-.back { text-align: left; margin-top:10px;}
-.back a {color: #444444; font-size: 13px;text-decoration: none;}
