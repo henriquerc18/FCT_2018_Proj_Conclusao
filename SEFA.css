@@ -71,6 +71,34 @@
 		margin-top: 80px;
 	}
 	
+	.cha_primavera href{
+		position: relative; 
+		top: 20px; 
+		width: 30%; 
+		height: 50px;
+	}
+	
+	.cha_primavera img{
+		position: relative; 
+		top: 150px; 
+		width: 30%;
+		height: 200px; 
+		transform: translateX(40%);
+	}
+	
+	.cha_primavera p{
+		opacity: .5; 
+		text-align: center; 
+		font-family: arial; 
+		font-size: 20px; 
+		color: orange; 
+		background: white; 
+		margin-top: 120px; 
+		width: 30%; 
+		height: 30px; 
+		transform: translateX(40%);
+	}
+	
 	.center {
         display: flex;
         display: -webkit-flex;
