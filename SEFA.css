@@ -87,7 +87,7 @@
 	}
 	
 	.cha_primavera p{
-		opacity: .5; 
+		opacity: .7; 
 		text-align: center; 
 		font-family: arial; 
 		font-size: 20px; 
@@ -98,10 +98,3 @@
 		height: 30px; 
 		transform: translateX(40%);
 	}
-	
-	.center {
-        display: flex;
-        display: -webkit-flex;
-        justify-content: center;
-        align-items: center;
-    }
