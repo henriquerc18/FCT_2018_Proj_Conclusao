@@ -45,11 +45,11 @@
 			<div class="main-div">
 			<div class="panel">
 			<h2> Login </h2>
-			<p> Por favor, insira seu email e senha </p>
+			<p> Por favor, insira seu usuário e senha: </p>
 		</div>
 		<form id="Login">
 			<div class="form-group">
-				<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+				<input type="email" class="form-control" id="inputEmail" placeholder="Usuário">
 			</div>
 
 			<div class="form-group">
@@ -58,6 +58,12 @@
 			<div class="forgot">
 				<a href="reset.html"> Esqueceu sua senha? </a>
 			</div>
+			<label> Selecione o tipo de usuário: <br>
+				<select name="aluno" id="aluno">
+					<option value="Aluno(a)" selected="selected"> Aluno(a) </option>
+					<option value="Admin"> Administrador </option>
+				</select> <br>
+			</label> 
 			<button type="submit" class="btn btn-primary">Login</button>
 		</form>
     </div>
