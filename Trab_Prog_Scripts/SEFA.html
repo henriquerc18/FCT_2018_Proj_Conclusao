@@ -26,17 +26,21 @@
 	<body>
 		
 		<form action="https://www.google.com/recaptcha/api/siteverify" method="post" name="Contato">
-			<fieldset style="height: 250px;">				
+			<fieldset style="width: 60%;">				
 				<legend style="color: orangered;"> Contato </legend>
-				Nome: <input type="text" name="Nome"/> 
-				<br><br> 
-				Usuário: <input type="text" name="Email"/> <br> 
-				<br><br>
-				Senha: <input type="text" name="Email"/> <br> 
+				Nome: <input type="text" name="Nome"/> <br><br><br>
+				Usuário: <input type="text" name="Email"/> <br> <br><br>
+				Senha: <input type="text" name="Email"/> <br> <br><br>
 				
-				Senha: <input type="text" name="Email"/> <br> 
+				<label> Grupo: </label>
+					<select name="grupo" id="grupo">
+						<option value="ESDE_Segunda" selected="selected"> ESDE - Segunda </option>
+						<option value="ESDE_Terça"> ESDE - Terça </option>
+						<option value="ESDE_Quinta"> ESDE - Quinta </option>
+					</select>
+				</label><br><br><br>
 				
-				<input type="submit" name="botaoEnviarFormulario" value="Enviar"/>
+				<input type="submit" name="botaoEnviarFormulario" value="Cadastrar"/>
 			</fieldset>
 		</form>
 		
