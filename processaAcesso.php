@@ -14,12 +14,12 @@
 			}
 			
 			public function verificaAcesso($login, $senha){
-				$select = $this->db->select('tb_usuario', '*', " where login_usuario = '$login' and senha_usuario = '$senha'");
+				$select = $this->db->select('usuario', '*', " where usuario = '$login' and senha = '$senha'");
 				return $select;
 			}
 			
 			public function cadastraUsuario($dados){
-				$insert = $this->db->insert('tb_usuario', $dados);
+				$insert = $this->db->insert('usuario', $dados);
 				return $insert;
 			}
 		}

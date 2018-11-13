@@ -51,24 +51,22 @@
 				
 				<h4 style="margin-top: 130px; text-align: center;"> Login </h4>
 				<p style="text-align: center;"> Por favor, insira seu usuário e senha: </p><br>
-				
-				<form action="controle.php" method="post">
 		
-					<input type="email" class="form-control" id="login" placeholder="Usuário" style="margin-left: 537.5px; width: 20%;"><br>	
-			
-					<input type="password" class="form-control" id="senha" placeholder="Senha" style="margin-left: 537.5px; width: 20%;"><br>
-			
-					<a href="reset.html" style="margin-left: 500px; width: 35%;"> Esqueceu sua senha? </a><br><br>
-					<label style="margin-left: 537.5px; width: 35%;"> Selecione o tipo de usuário: <br>
-						<select name="usuario" id="usuario">
-							<option value="Aluno(a)" selected="selected"> Aluno(a) </option>
-							<option value="Coord"> Coordenador </option>
-							<option value="Admin"> Administrador </option>
-						</select><br><br>
-					</label><br><br>
-					<button type="submit" class="btn btn-primary" style="background: orange; width: 20%; margin-left: 537.5px; text-align: center;"> Login </button><br><br><br><br><br><br>
-					<a href="cadastrar.php"> Sem cadastro? </a
-				</form>
+				<p style="color: red; text-align: center;"> Nome de usuário ou senha incorretos. Tente novamente. </p>
+				<input type="email" class="form-control" id="login" placeholder="Usuário" style="margin-left: 537.5px; width: 20%;"><br>	
+		
+				<input type="password" class="form-control" id="senha" placeholder="Senha" style="margin-left: 537.5px; width: 20%;"><br>
+		
+				<a href="reset.html" style="margin-left: 500px; width: 35%;"> Esqueceu sua senha? </a><br><br>
+				<label style="margin-left: 537.5px; width: 35%;"> Selecione o tipo de usuário: <br>
+					<select name="usuario" id="usuario">
+						<option value="Aluno(a)" selected="selected"> Aluno(a) </option>
+						<option value="Coord"> Coordenador </option>
+						<option value="Admin"> Administrador </option>
+					</select><br><br>
+				</label><br><br>
+				<button type="submit" class="btn btn-primary" style="background: orange; width: 20%; margin-left: 537.5px; text-align: center;"> Login </button><br><br><br><br><br><br>
+			</form>
 		</div>
 		
 	</body>
