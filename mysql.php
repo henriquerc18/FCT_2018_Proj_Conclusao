@@ -1,7 +1,7 @@
 <?php
 	namespace Mysql{
 		define('DB_SERVER', 'localhost');
-		define('DB_NAME', 'acesso');
+		define('DB_NAME', 'sefa');
 		define('DB_USERNAME', 'root');
 		define('DB_PASSWORD', 'amazingday250193');
 		
