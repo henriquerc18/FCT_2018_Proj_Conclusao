@@ -17,9 +17,7 @@
 		<title> Sociedade Espírita Francisco de Assis </title>
 		<link rel="stylesheet" href="Login_SEFA.css">
 		<link rel="stylesheet" type="text/css" href="js/bootstrap.min.js" />		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="styles.css">
-
 		 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -32,9 +30,9 @@
 	</head>
 		<body>
 		
-			<img style="z-index: 2; position: relative; width:81.15%; height:200px;transform: translateX(11%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
+			<img style="margin-left: 0px; top: 0px; z-index: 2; position: absolute; width:81.15%; height:200px;transform: translateX(8.21%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
 
-			<nav class="menu" style="top:200px;">		
+			<nav class="menu" style="top:200px; transform: translateX(0%);">		
 				<div id='cssmenu'>
 					<ul>
 					   <li><a href='SEFA.html'> Home </a></li>
@@ -54,19 +52,19 @@
 				
 				<form action="controle.php" method="post">
 		
-					<input type="email" class="form-control" name="login" placeholder="Usuário" style="margin-left: 537.5px; width: 20%;"><br>	
+					<input type="email" class="form-control" name="login" placeholder="Usuário"><br><br>	
 			
-					<input type="password" class="form-control" name="senha" placeholder="Senha" style="margin-left: 537.5px; width: 20%;"><br>
+					<input type="password" class="form-control" name="senha" placeholder="Senha"><br><br>
 			
 					<a href="resetx.html" style="margin-left: 500px; width: 35%;"> Esqueceu sua senha? </a><br><br>
-					<label style="margin-left: 537.5px; width: 35%;"> Selecione o tipo de usuário: <br>
-						<select name="usuario" id="usuario">
+					<label style="margin-left: 537.5px; width: 35%;"> Selecione o tipo de usuário: <br><br>
+						<select name="usuario" id="usuario" style="margin-left: 537.5px; width: 15%;">
 							<option value="1" selected="selected"> Aluno(a) </option>
 							<option value="2"> Coordenador </option>
 							<option value="3"> Administrador </option>
 						</select><br><br>
 					</label><br><br>
-					<button type="submit" class="btn btn-primary" style="background: orange; width: 20%; margin-left: 537.5px; text-align: center;"> Login </button><br><br><br><br><br><br>
+					<button type="submit" class="btn-primary"> Login </button><br><br><br><br><br><br>
 				</form>
 		</div>
 		
