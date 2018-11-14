@@ -18,7 +18,7 @@
 		}else if($_POST['cadastrar']){
 			$login = $_POST['usuario'];
 			$senha = md5($_POST['senha']);
-			$tipo_usuario = $_POST['acesso_idAcesso'];
+			$tipo_usuario = $_POST['tipo_usuario'];
 			$arr = array('usuario' => $login, 'senha' => $senha, 'acesso_idAcesso' => $tipo_usuario);
 			if(!$controle->cadastraUsuario($arr)){
 				echo 'Aconteceu algum erro';
@@ -28,6 +28,8 @@
 					header("Location: pagina1.html");
 				}else if($tipo_acesso[0]['id_tipo_acesso'] == 2){
 					header("Location: pagina2.html");
+				}else if($tipo_acesso[0]['id_tipo_acesso'] == 3){
+					header("Location: pagina3.html");
 				}
 			}
 		}
