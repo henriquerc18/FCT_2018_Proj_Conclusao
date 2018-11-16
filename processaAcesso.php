@@ -1,4 +1,7 @@
 <?php
+
+	include 'global.php';
+	
 	namespace processaAcesso{
 		include 'mysql.php';
 		

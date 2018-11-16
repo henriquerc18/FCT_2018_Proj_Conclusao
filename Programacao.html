@@ -40,7 +40,9 @@
 		</style>
 	</head>
 	<body>
-			
+		<?php
+			include 'global.php';
+		?>
 		<nav class="menu" style="top:200px;">		
 			<div id='cssmenu'>
 				<ul>
@@ -64,7 +66,9 @@
 					margin-left: 600px;
 				}
 			</style>
-			<p> Escolher data: <input type="text" id="calendario"/></p>
+
+			<h1 style="font-family: Monotype Corsiva; font-size: 22pt; margin-left: 200px; margin-top: 50px; color: orange"> Atendimento Fraterno: </h1>
+			<p style="font-family: arial; margin-left: 150px; margin-top: 100px;"> Agendar data: <input type="text" id="calendario"/></p>
 		</div>
 		
 		<script>
@@ -73,8 +77,14 @@
 			});
 		</script>
 		
-		<p style="z-index: 2; font-family: castellar; margin-left: 150px; margin-top: 150px;"> Confira a programação da SEFA: </p>
-		<table style="z-index:2; margin-left: 150px;">
+		<p style="z-index: 2; font-family: arial; font-size: 12pt; margin-left: 150px; margin-top: -120px;"> Confira a programação da SEFA: </p>
+		<table style="z-index:2; margin-left: 150px; border: inset 2px orange; border-collapse: collapse;">
+			<style>
+				td, tr {
+					border: inset 2px orange;
+					border-collapse: collapse;
+				}
+			</style>
 			<tr>
 				<th> Segundas </th>
 				<td> <p style="color: black; font-family: arial;"> 19:00 - Palestras Públicas Doutrinárias <br> 19:30 - Passes <br> 20:00 - Estudo Sistematizado da Doutrina Espírita </td>
@@ -103,7 +113,7 @@
 				<td> <p style="color: black; font-family: arial;"> 10:00 - Evangelização de Crianças e Jovens
 				</td>
 			</tr>
-		</table>
+		</table><br><br><br><br>
 		
 	</body>
 </html>

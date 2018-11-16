@@ -1,4 +1,9 @@
 <?php
+
+	<?php
+		include 'global.php';
+	?>
+	
 	namespace controle{
 		include 'processaAcesso.php';
 		

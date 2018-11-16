@@ -1,4 +1,4 @@
- body { 
+body { 
 	 background: -webkit-linear-gradient(#ffdb99, white); 
 	 background: -moz-linear-gradient(#ffdb99, white); 
 	 background: -o-linear-gradient(#ffdb99, white); 
@@ -8,7 +8,11 @@
 	 background-position: 50% 40%; 
 	 margin: 30px 40px 10px 30px; 
  }	 
-	
+
+	<?php
+		include 'global.php';
+	?>
+ 
 	.SEFA_Titulo {
 		font-family: Monotype Corsiva;
 		font-size: 80px;
@@ -27,11 +31,6 @@
 		top: 250px;
 		left: 120px;
 		text-align: center;
-	}
-	
-	table, td, tr {
-		border: inset 2px orange;
-		border-collapse: collapse;
 	}
 	
 	.formulario_contato {

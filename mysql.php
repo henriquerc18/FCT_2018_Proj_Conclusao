@@ -1,4 +1,7 @@
 <?php
+
+	include 'global.php';
+	
 	namespace Mysql{
 		define('DB_SERVER', 'localhost');
 		define('DB_NAME', 'sefa');

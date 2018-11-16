@@ -10,6 +10,11 @@
 			<meta charset="UTF-8">
 		</head>
 		<body>
+		
+			<?php
+				include 'global.php';
+			?>
+			
 			<div> Cadastro de usuário </div>
 			<form action="controle.php" method="post">
 				<label> Login </label><input type="text" name="login" value=""/><br>
