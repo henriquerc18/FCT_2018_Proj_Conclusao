@@ -15,9 +15,9 @@ CREATE SCHEMA IF NOT EXISTS `sefa` DEFAULT CHARACTER SET utf8 ;
 USE `sefa` ;
 
 -- -----------------------------------------------------
--- Table `sefa`.`acesso`
+-- Table `sefa`.`tb_acesso`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sefa`.`acesso` (
+CREATE TABLE IF NOT EXISTS `sefa`.`tb_acesso` (
   `idAcesso` INT(12) NOT NULL,
   `tipo` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idAcesso`),
@@ -26,9 +26,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `sefa`.`grupo`
+-- Table `sefa`.`tb_grupo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sefa`.`grupo` (
+CREATE TABLE IF NOT EXISTS `sefa`.`tb_grupo` (
   `idGrupo` INT(12) NOT NULL,
   `descricao` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idGrupo`),
@@ -37,9 +37,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `sefa`.`usuario`
+-- Table `sefa`.`tb_usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sefa`.`usuario` (
+CREATE TABLE IF NOT EXISTS `sefa`.`tb_usuario` (
   `idUsuario` INT(12) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `usuario` VARCHAR(45) NOT NULL,
@@ -54,12 +54,12 @@ CREATE TABLE IF NOT EXISTS `sefa`.`usuario` (
   INDEX `fk_usuario_grupo1_idx` (`grupo_idGrupo` ASC),
   CONSTRAINT `fk_usuario_acesso`
     FOREIGN KEY (`acesso_idAcesso`)
-    REFERENCES `sefa`.`acesso` (`idAcesso`)
+    REFERENCES `sefa`.`tb_acesso` (`idAcesso`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_usuario_grupo1`
     FOREIGN KEY (`grupo_idGrupo`)
-    REFERENCES `sefa`.`grupo` (`idGrupo`)
+    REFERENCES `sefa`.`tb_grupo` (`idGrupo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

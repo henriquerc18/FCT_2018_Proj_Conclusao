@@ -1,15 +1,12 @@
 <?php
-
-	<?php
-		include 'global.php';
-	?>
 	
 	namespace controle{
+		include 'global.php';
 		include 'processaAcesso.php';
 		
 		$controle = new \processaAcesso\ProcessaAcesso;
 		if(@$_POST['enviar']){
-			$login = $_POST['usuario'];
+			$login = $_POST['login'];
 			$senha = md5 ($_POST['senha']);
 			$usuario = $controle->verificaAcesso($login, $senha);
 			
@@ -19,9 +16,11 @@
 				header("Location: pagina2.html");
 			}else if($usuario[0]['acesso_idAcesso'] == 3){
 				header("Location: pagina3.html");
-			}
-		}else if($_POST['cadastrar']){
-			$login = $_POST['usuario'];
+			}else{
+				?><p> Usuário ou senha incorretos </p>
+	  <?php }
+		/*}else if($_POST['cadastrar']){
+			$login = $_POST['login'];
 			$senha = md5($_POST['senha']);
 			$tipo_usuario = $_POST['tipo_usuario'];
 			$arr = array('usuario' => $login, 'senha' => $senha, 'acesso_idAcesso' => $tipo_usuario);
@@ -36,7 +35,7 @@
 				}else if($tipo_acesso[0]['id_tipo_acesso'] == 3){
 					header("Location: pagina3.html");
 				}
-			}
+			}*/
 		}
 	}
 ?>

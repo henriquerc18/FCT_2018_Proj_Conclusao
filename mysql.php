@@ -1,8 +1,8 @@
 <?php
-
-	include 'global.php';
 	
 	namespace Mysql{
+		include 'global.php';
+		
 		define('DB_SERVER', 'localhost');
 		define('DB_NAME', 'sefa');
 		define('DB_USERNAME', 'root');

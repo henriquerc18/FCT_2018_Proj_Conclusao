@@ -1,8 +1,7 @@
 <?php
-
-	include 'global.php';
 	
 	namespace processaAcesso{
+		include 'global.php';
 		include 'mysql.php';
 		
 		use Mysql as Mysql;
@@ -17,12 +16,12 @@
 			}
 			
 			public function verificaAcesso($login, $senha){
-				$select = $this->db->select('usuario', '*', " where usuario = '$login' and senha = '$senha'");
+				$select = $this->db->select('tb_usuario', '*', " where usuario = '$login' and senha = '$senha'");
 				return $select;
 			}
 			
 			public function cadastraUsuario($dados){
-				$insert = $this->db->insert('usuario', $dados);
+				$insert = $this->db->insert('tb_usuario', $dados);
 				return $insert;
 			}
 		}
