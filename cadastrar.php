@@ -17,6 +17,7 @@
 			
 			<div> Cadastro de usuário </div>
 			<form action="controle.php" method="post">
+				<label> Nome </label><input type="text" name="nome" value=""/><br>
 				<label> Login </label><input type="text" name="login" value=""/><br>
 				<label> Senha </label><input type="password" name="senha" value=""/><br>
 				<label> Tipo de usuário </label>
@@ -24,8 +25,8 @@
 					<option value=""> Selecione </option>
 					<option value="1"> Aluno(a) </option>
 					<option value="2"> Coordenador </option>
-					<option value="3"> Administrador </option>
 				</select><br>
+				<label> Grupo </label>
 				<input type="submit" name="cadastrar" value="cadastrar"/>
 				<a href="cadastrar.php"> Sem cadastro? </a>
 			</form>

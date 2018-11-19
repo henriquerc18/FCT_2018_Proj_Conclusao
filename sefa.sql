@@ -44,21 +44,18 @@ CREATE TABLE IF NOT EXISTS `sefa`.`tb_usuario` (
   `nome` VARCHAR(45) NOT NULL,
   `usuario` VARCHAR(45) NOT NULL,
   `senha` VARCHAR(45) NOT NULL,
-  `grupo` VARCHAR(45) NOT NULL,
   `acesso_idAcesso` INT(12) NOT NULL,
-  `grupo_idGrupo` INT(12) NOT NULL,
-  PRIMARY KEY (`idUsuario`, `acesso_idAcesso`, `grupo_idGrupo`),
-  UNIQUE INDEX `idUsuario_UNIQUE` (`idUsuario` ASC),
-  UNIQUE INDEX `usuario_UNIQUE` (`usuario` ASC),
+  `tb_grupo_idGrupo` INT(12) NOT NULL,
+  PRIMARY KEY (`idUsuario`, `acesso_idAcesso`, `tb_grupo_idGrupo`),
   INDEX `fk_usuario_acesso_idx` (`acesso_idAcesso` ASC),
-  INDEX `fk_usuario_grupo1_idx` (`grupo_idGrupo` ASC),
+  INDEX `fk_tb_usuario_tb_grupo1_idx` (`tb_grupo_idGrupo` ASC),
   CONSTRAINT `fk_usuario_acesso`
     FOREIGN KEY (`acesso_idAcesso`)
     REFERENCES `sefa`.`tb_acesso` (`idAcesso`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usuario_grupo1`
-    FOREIGN KEY (`grupo_idGrupo`)
+  CONSTRAINT `fk_tb_usuario_tb_grupo1`
+    FOREIGN KEY (`tb_grupo_idGrupo`)
     REFERENCES `sefa`.`tb_grupo` (`idGrupo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
