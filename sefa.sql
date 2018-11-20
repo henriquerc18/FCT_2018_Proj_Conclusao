@@ -18,7 +18,7 @@ USE `sefa` ;
 -- Table `sefa`.`tb_acesso`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sefa`.`tb_acesso` (
-  `idAcesso` INT(12) NOT NULL,
+  `idAcesso` INT(11) NOT NULL,
   `tipo` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idAcesso`),
   UNIQUE INDEX `idAcesso_UNIQUE` (`idAcesso` ASC))
@@ -29,7 +29,7 @@ ENGINE = InnoDB;
 -- Table `sefa`.`tb_grupo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sefa`.`tb_grupo` (
-  `idGrupo` INT(12) NOT NULL,
+  `idGrupo` INT(11) NOT NULL,
   `descricao` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idGrupo`),
   UNIQUE INDEX `idGrupo_UNIQUE` (`idGrupo` ASC))
@@ -40,7 +40,7 @@ ENGINE = InnoDB;
 -- Table `sefa`.`tb_usuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sefa`.`tb_usuario` (
-  `idUsuario` INT(12) NOT NULL AUTO_INCREMENT,
+  `idUsuario` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `usuario` VARCHAR(45) NOT NULL,
   `senha` VARCHAR(45) NOT NULL,

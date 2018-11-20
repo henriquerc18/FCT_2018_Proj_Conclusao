@@ -16,7 +16,7 @@
 			}
 			
 			public function verificaAcesso($login, $senha){
-				$select = $this->db->select('tb_usuario', '*', " where nome = '$nome' and usuario = '$login' and senha = '$senha' and acesso_idAcesso = $'tipo_usuario' and tb_grupo_idGrupo = '$grupo'");
+				$select = $this->db->select('tb_usuario', '*', " where usuario = '$login' and senha = '$senha'");
 				return $select;
 			}
 			
