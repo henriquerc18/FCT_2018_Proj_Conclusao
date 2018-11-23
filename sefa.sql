@@ -41,11 +41,11 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sefa`.`tb_usuario` (
   `idUsuario` INT(11) NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
+  `nome` VARCHAR(45) NULL,
   `usuario` VARCHAR(45) NOT NULL,
   `senha` VARCHAR(45) NOT NULL,
-  `acesso_idAcesso` INT(12) NOT NULL,
-  `tb_grupo_idGrupo` INT(12) NOT NULL,
+  `acesso_idAcesso` INT(11) NOT NULL,
+  `tb_grupo_idGrupo` INT(11) NOT NULL,
   PRIMARY KEY (`idUsuario`, `acesso_idAcesso`, `tb_grupo_idGrupo`),
   INDEX `fk_usuario_acesso_idx` (`acesso_idAcesso` ASC),
   INDEX `fk_tb_usuario_tb_grupo1_idx` (`tb_grupo_idGrupo` ASC),
