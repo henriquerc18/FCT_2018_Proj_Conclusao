@@ -50,35 +50,38 @@
 					</ul>
 				</div>
 			</nav>
-			
+				
 			<div class="form_cad_aluno">
 				<style>
 					.form_cad_aluno {
-						margin-top: 320px;
-							
+						margin-top: 350px;
+						margin-left: 110px;
 						width: 100%;
 					}
 				</style>
-				<h4 style="margin-top: 130px; text-align: center;"> Login </h4>
-				<p style="text-align: center;"> Por favor, insira seu usuário e senha: </p><br>
-				
 				<form action="controle.php" method="post" name="Contato">
 					<fieldset style="width: 60%;">				
 						<legend style="color: orangered;"> Cadastrar Novo Aluno </legend>
-						Nome: <input type="text" name="Nome"/> <br><br><br>
-						Usuário: <input type="text" name="usuario"/> <br> <br><br>
+						Nome: <input type="text" name="nome"/> <br><br><br>
+						Usuário: <input type="text" name="login"/> <br> <br><br>
 						Senha: <input type="text" name="senha"/> <br> <br><br>
 						Confirme a Senha: <input type="text" name="confirma_senha"/> <br> <br><br>
 						
 						<label> Grupo: </label>
-							<select name="grupo" id="grupo">
-								<option value="ESDE_Segunda" selected="selected"> ESDE - Segunda </option>
-								<option value="ESDE_Terça"> ESDE - Terça </option>
-								<option value="ESDE_Quinta"> ESDE - Quinta </option>
+							<select name="selecionar_grupo">
+								<option value="100" selected="selected"> ESDE - Segunda </option>
+								<option value="200"> ESDE I - Terça </option>
+								<option value="300"> ESDE II - Terça </option>
+								<option value="400"> ESDE - Quinta </option>
 							</select>
 						</label><br><br><br>
 						
-						<input type="submit" name="botaoEnviarFormulario" value="Cadastrar"/>
+						<label> Tipo de usuário </label>
+						<select name="tipo_usuario">
+							<option value="1" selected="selected"> Aluno </option>
+						</select><br>
+						
+						<input type="submit" name="cadastrar" value="Cadastrar"/>
 					</fieldset>
 				</form>
 	

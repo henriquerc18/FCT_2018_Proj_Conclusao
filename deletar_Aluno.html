@@ -50,24 +50,21 @@
 					</ul>
 				</div>
 			</nav>
-			
-			<a href="Login_SEFA.html" style="margin-top: 500px;"> Sair </a>
-			
-			<div class="cad_aluno">
+				
+			<div class="form_cad_aluno">
 				<style>
-					.cad_aluno {
-						margin-top: 270px;
+					.form_cad_aluno {
+						margin-top: 350px;
+						margin-left: 110px;
 						width: 100%;
 					}
 				</style>
-				<p style="font-family: arial; text-align: center;"> Selecione a opção desejada: </p><br>
-					
-				<button class="btn-primary" onclick="window.open('cad_aluno.html');" target="_self" style="font-family: arial; margin-left: 515px; text-align: center;"> Cadastrar Aluno </button><br><br>
 				
-				<button class="btn-primary" onclick="window.open('deletar_Aluno.html');" target="_self" style="font-family: arial; margin-left: 515px; text-align: center;"> Remover Aluno </button><br><br>
-			
-				<button type="submit" class="btn-primary" style="font-family: arial; margin-left: 515px; text-align: center;"> Adicionar Conteúdo </button><br><br><br><br><br><br>
-			
-			</div>		
+				<?php
+					$exibeAlunos = "SELECT * FROM sefa.tb_usuario" where acesso_idAcesso = 1;
+					return $exibeAlunos;
+				?>
+	
+			</div>
 	</body>
 </html>

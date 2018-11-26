@@ -9,19 +9,18 @@
 			$login = $_POST['login'];
 			$senha = md5($_POST['senha']);
 			$usuario = $controle->verificaAcesso($login, $senha);
-			echo "oi";
-			if($usuario[0]['idUsuario'] == 3){
-				echo "oi if";
-			}else{
-					echo "oi else";
-			}	/*else if($usuario[0]['acesso_idAcesso'] == 2){
-				header("Location: cadastrar.php");
-			}else if($usuario[0]['acesso_idAcesso'] == 3){
+			echo $login;
+			echo $senha;
+			if($usuario[0]['acesso_idAcesso'] == 1){
+				session_start();
+				header("Location: pagina1.html");
+			}else if($usuario[0]['acesso_idAcesso'] == 2){
+				session_start();
+				header("Location: pagina2.html");
+			}else{				
 				header("Location: pagina3.html");
-			}else{
-				header("Location: pagina3.html");
-			}*/
-		}/*else if($_POST['cadastrar']){
+			}
+		}else if($_POST['cadastrar']){
 			$nome = $_POST['nome'];
 			$login = $_POST['login'];
 			$senha = md5($_POST['senha']);
@@ -31,15 +30,13 @@
 			if(!$controle->cadastraUsuario($arr)){
 				echo 'Aconteceu algum erro';
 			}else{
-				$tipo_acesso = $controle->verificaAcesso($nome, $login, $senha, $tipo_usuario, $grupo);
-				 if($tipo_acesso[0]['acesso_idAcesso'] == 1){
+				$acesso_idAcesso = $controle->verificaAcesso($login, $senha);
+				 if($acesso_idAcesso[0]['acesso_idAcesso'] == 1){
 					header("Location: pagina1.html");
-				}else if($tipo_acesso[0]['acesso_idAcesso'] == 2){
+				}else if($acesso_idAcesso[0]['acesso_idAcesso'] == 2){
 					header("Location: pagina2.html");
-				}else if($tipo_acesso[0]['acesso_idAcesso'] == 3){
-					header("Location: pagina3.html");
 				}
 			}
-		}*/
+		}
 	}
 ?>

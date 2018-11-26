@@ -16,13 +16,18 @@
 			}
 			
 			public function verificaAcesso($login, $senha){
-				$select = $this->db->select('tb_usuario', '*', " where usuario = '$login' and senha = '$senha'");
+				$select = $this->db->select('sefa.tb_usuario', '*', " where usuario = '$login' and senha = '$senha'");
 				return $select;
 			}
 			
 			public function cadastraUsuario($dados){
 				$insert = $this->db->insert('tb_usuario', $dados);
 				return $insert;
+			}
+			
+			public function deletaUsuario ($dados){
+				$delete = $this->db->remove('tb_usuario', $dados);
+				return $delete;
 			}
 		}
 	}
