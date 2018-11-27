@@ -39,19 +39,6 @@
 				return $this->executar($sql);
 			}
 			
-			public function remove($tabela, $dados){
-				foreach($dados as $key => $value){
-					$keys[] = $key;
-					$deletevalues[] = '\'' . $value . '\'';
-				}
-				$keys = implode(',', $keys);
-				$deletevalues = implode(',', $deletevalues);
-				
-				$sql = "DELETE FROM $tabela ($keys) WHERE idUsuario = '($deletevalues)'";
-				
-				return $this->executar($sql);
-			}
-			
 			private function executar($sql){
 				$return_result = @mysql_query($sql, $this->conn);
 				if($return_result){

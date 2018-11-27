@@ -24,11 +24,6 @@
 				$insert = $this->db->insert('tb_usuario', $dados);
 				return $insert;
 			}
-			
-			public function deletaUsuario ($dados){
-				$delete = $this->db->remove('tb_usuario', $dados);
-				return $delete;
-			}
 		}
 	}
 ?>
