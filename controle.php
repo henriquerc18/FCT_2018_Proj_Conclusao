@@ -12,11 +12,11 @@
 			echo $login;
 			echo $senha;
 			if($usuario[0]['acesso_idAcesso'] == 1){
-				session_start();
 				header("Location: pagina1.html");
 			}else if($usuario[0]['acesso_idAcesso'] == 2){
-				session_start();
 				header("Location: pagina2.html");
+			}else if($usuario[0]['acesso_idAcesso'] == 3){
+				header("Location: admin.html");
 			}else{				
 				header("Location: pagina3.html");
 			}
