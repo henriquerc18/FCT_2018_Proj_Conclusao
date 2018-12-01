@@ -20,9 +20,19 @@
 				return $select;
 			}
 			
+			public function verificaUsuario($tipo_usuario){
+				$select = $this->db->select('sefa.tb_usuario', '*', " where acesso_idAcesso = '$tiṕo_usuario'");
+				return $select;
+			}
+			
 			public function cadastraUsuario($dados){
 				$insert = $this->db->insert('tb_usuario', $dados);
 				return $insert;
+			}
+			
+			public function deletaUsuario($dados){
+				$delete = $this->db->delete('tb_usuario', $dados);
+				return $delete;
 			}
 		}
 	}

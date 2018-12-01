@@ -59,31 +59,19 @@
 						width: 100%;
 					}
 				</style>
-				<form action="controle.php" method="post" name="Contato">
+				
+				<form action="controle.php" method="post" name="selecionar_usuario">
 					<fieldset style="width: 60%;">				
-						<legend style="color: orangered;"> Cadastrar Novo Usuário </legend>
-						Nome: <input type="text" name="nome"/> <br><br><br>
-						Usuário: <input type="text" name="login"/> <br> <br><br>
-						Senha: <input type="text" name="senha"/> <br> <br><br>
-						Confirme a Senha: <input type="text" name="confirma_senha"/> <br> <br><br>
+						<legend style="color: orangered;"> Selecione o usuário a ser deletado </legend>
 						
-						<label> Grupo: </label>
-							<select name="selecionar_grupo">
-								<option value="100" selected="selected"> ESDE - Segunda </option>
-								<option value="200"> ESDE I - Terça </option>
-								<option value="300"> ESDE II - Terça </option>
-								<option value="400"> ESDE - Quinta </option>
-							</select>
-						</label><br><br><br>
-						
-						<label> Tipo de usuário </label>
-						<select name="tipo_usuario">
+						<label> Tipo de usuário: </label>
+						<select name="tipo_usuario" class="btn-primary" style="font-family: arial; margin-left: 80px; text-align: center;">
 							<option value="1" selected="selected"> Aluno(a) </option>
 							<option value="2"> Coordenador(a) </option>
 							<option value="3"> Administrador </option>
-						</select><br>
+						</select><br><br><br><br><br><br>
 						
-						<input type="submit" name="cadUsuario" value="Cadastrar"/>
+						<button type="submit" class="btn-primary" name="Ok" style="font-family: arial; margin-left: 80px; text-align: center;"> Ok </button><br><br>
 					</fieldset>
 				</form>
 	
