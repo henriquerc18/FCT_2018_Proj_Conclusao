@@ -26,6 +26,15 @@
 				return $return;
 			}
 			
+			public function selectUser($tabela, $colunas = "*", $where = "'acesso_idAcesso' = 'acesso_idAcesso'"){
+				$sql = "SELECT $colunas FROM $tabela $where";
+				$result = $this->executar($sql);
+				while($row = @mysql_fetch_array($result, MYSQL_ASSOC)){
+					$return[] = $row;
+				}
+				return $return;
+			}
+			
 			public function insert($tabela, $dados){
 				foreach($dados as $key => $value){
 					$keys[] = $key;
@@ -39,7 +48,7 @@
 				return $this->executar($sql);
 			}
 			
-			public function delete($tabela, $dados){
+			public function deletar($tabela, $dados){
 				foreach($dados as $key => $value){
 					$keys[] = $key;
 					$deletevalues[] = '\'' . $value . '\'';
@@ -47,7 +56,20 @@
 				$keys = implode(',', $keys);
 				$deletevalues = implode(',', $deletevalues);
 				
-				$sql = "DELETE FROM $tabela ($keys) WHERE idUsuario = $deletevalues";
+				$sql = "DELETE FROM $tabela WHERE idUsuario = $deletevalues";
+				
+				return $this->executar($sql);
+			}
+			
+			public function atualizaSenha($tabela, $dados){
+				foreach($dados as $key => $value){
+					$keys[] = $key;
+					$updatevalues[] = '\'' . $value . '\'';
+				}
+				$keys = implode(',', $keys);
+				$updatevalues = implode(',', $updatevalues);
+				
+				$sql = "UPDATE $tabela SET $keys WHERE idUsuario = $updatevalues";
 				
 				return $this->executar($sql);
 			}

@@ -57,12 +57,29 @@
 				}
 			}
 		}else if(isset($_POST['Ok'])){
-			$tipo_usuario = $_POST['tipo_usuario'];
+			$tipo_usuario = 1;
 			$arr = array('acesso_idAcesso' => $tipo_usuario);
 			if(!$controle->deletaUsuario($arr)){
 				echo 'Aconteceu algum erro';
 			}else{
-				$acesso_idAcesso = $controle->verificaUsuario();
+				$acesso_idAcesso = $controle->verificaUsuario($tipo_usuario);
+				if($acesso_idAcesso[0]['acesso_idAcesso'] == 1){
+					header("Location: deletar_Aluno.html");
+				}else if($acesso_idAcesso[0]['acesso_idAcesso'] == 2){
+					header("Location: deletar_Coordenador.html");
+				}else if($acesso_idAcesso[0]['acesso_idAcesso'] == 3){
+					header("Location: deletar_Admin.html");
+				}
+			}
+		}else if(isset($_POST['esqueci_senha'])){
+			$login = $_POST['login'];
+			$senha = md5($_POST['senha']);
+			$novaSenha = md5($_POST['confirmaSenha']);
+			$arr = array('usuario' => $login, 'senha' => $senha, 'senha' => $novaSenha);
+			if(!$controle->atualizaSenha($arr)){
+				echo 'Aconteceu algum erro';
+			}else{
+				$acesso_idAcesso = $controle->updateUsuario();
 				if($acesso_idAcesso[0]['acesso_idAcesso'] == 1){
 					header("Location: deletar_Aluno.html");
 				}else if($acesso_idAcesso[0]['acesso_idAcesso'] == 2){

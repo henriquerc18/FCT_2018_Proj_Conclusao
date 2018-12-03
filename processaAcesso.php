@@ -21,7 +21,7 @@
 			}
 			
 			public function verificaUsuario($tipo_usuario){
-				$select = $this->db->select('sefa.tb_usuario', '*', " where acesso_idAcesso = '$tiṕo_usuario'");
+				$select = $this->db->selectUser('sefa.tb_usuario', '*', " where acesso_idAcesso = '$tipo_usuario'");
 				return $select;
 			}
 			
@@ -31,8 +31,13 @@
 			}
 			
 			public function deletaUsuario($dados){
-				$delete = $this->db->delete('tb_usuario', $dados);
+				$delete = $this->db->deletar('tb_usuario', $dados);
 				return $delete;
+			}
+			
+			public function updateUsuario($dados){
+				$update = $this->db->atualizaSenha('tb_usuario', $dados);
+				return $update;
 			}
 		}
 	}

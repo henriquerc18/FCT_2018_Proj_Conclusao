@@ -20,10 +20,10 @@
 		<link rel="stylesheet" href="styles.css">
 		<link rel="stylesheet" type="text/css" href="SEFA.css" />
 		 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-   		<script src="script.js"></script>
+   		<script src="script.js"></script> -->
 		
 
 <!------ Include the above in your HEAD tag ---------->
@@ -58,13 +58,13 @@
 					}
 				</style>
 					
-				<form action="controle.php" method="post" style="margin-left: 81.15px; width: 85.5%;">
+				<form action="controle.php" method="post" name="esqueciSenha" style="margin-left: 81.15px; width: 85.5%;">
 					<fieldset style="height: 250px;">
 						<legend style="color: orangered;"> Alterar Senha </legend>
 						
 						<label> Usuário: </label>
 						
-						<input type="email" class="form-control" name="login" style="margin-left: 30px;"><br><br>	
+						<input type="text" class="form-control" name="login" style="margin-left: 30px;"><br><br>	
 						
 						<label> Nova senha: </label>
 						
@@ -72,16 +72,9 @@
 					
 						<label> Confirme a senha: </label>
 					
-						<input type="password" class="form-control" name="novaSenha" style="margin-left: 30px;"><br><br>
+						<input type="password" class="form-control" name="confirmaSenha" style="margin-left: 30px;"><br><br>
 					
-						<label> Selecione o tipo de usuário: <br><br>
-							<select name="usuario" id="usuario" style="width: 15%;">
-								<option value="1" selected="selected"> Aluno(a) </option>
-								<option value="2"> Coordenador </option>
-								<option value="3"> Administrador </option>
-							</select><br><br>
-						</label><br><br>
-						<button type="submit" class="btn-primary"> Salvar </button><br><br><br><br><br><br>
+						<button type="submit" name="esqueci_senha" class="btn-primary"> Alterar </button><br><br><br><br><br><br>
 				</form>
 			</div>
 	</body>
