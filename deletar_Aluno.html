@@ -33,8 +33,7 @@
 		
 			<?php
 				include 'global.php';
-				include 'mysql.php';
-				include 'processaAcesso.php';
+				require_once 'mysql.php';
 				
 			?>
 		
@@ -56,19 +55,64 @@
 				
 			<?php
 				
-				$sql = SELECT * FROM tb_usuario where acesso_idAcesso = 1;
-				$return_result = @mysql_query($sql, $this->conn);
-				if($return_result){
-					return $return_result;
+				$con = new mysql();
+				$con->connect();
+				
+				if($con->connect()){
+					echo 'Conectou!';
 				}else{
-					$this->sql_error($sql);
+					echo 'Não conectou!';
 				}
-				while($row = @mysql_fetch_array($result, MYSQL_ASSOC)){
-					$return[] = $row;
-				}
-				return $return;
 				
 			?>
+			
+			<table style="margin-top: 300px; margin-left: 100px; border: 1px solid red;">
+				<thead>
+					<tr>
+						<th colspan="4"> Usuários </th>
+					</tr>
+					<tr>
+						<th> idUsuario </th>
+						<th> Nome </th>
+						<th> Usuário </th>
+						<th> Senha </th>
+						<th> acesso_idAcesso </th>
+						<th> tb_grupo_idGrupo </th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+						$consulta = mysql_query("SELECT * FROM tb_usuario");
+						while($campo = mysql_fetch_array($consulta)){						
+					?>
+					<tr>
+						<td>
+							<?php echo $campo['idUsuario']; ?>
+						</td>
+						<td>
+							<?php echo $campo['nome']; ?>
+						</td>
+						<td>
+							<?php echo $campo['usuario']; ?>
+						</td>
+						<td>
+							<?php echo $campo['senha']; ?>
+						</td>
+						<td>
+							<?php echo $campo['acesso_idAcesso']; ?>
+						</td>
+						<td>
+							<?php echo $campo['tb_grupo_idGrupo']; ?>
+						</td>
+						<td>
+							<a href="excluir.php?idUsuario=<?php echo $campo['idUsuario']; ?>"> Excluir </a>
+						</td>
+						<td>
+							<?php echo $campo['nome']; ?>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 			
 	</body>
 </html>
