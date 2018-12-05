@@ -57,7 +57,7 @@
 				}
 			}
 		}else if(isset($_POST['Ok'])){
-			$tipo_usuario = 1;
+			$tipo_usuario = $_POST['tipo_usuario'];
 			$arr = array('acesso_idAcesso' => $tipo_usuario);
 			if(!$controle->deletaUsuario($arr)){
 				echo 'Aconteceu algum erro';

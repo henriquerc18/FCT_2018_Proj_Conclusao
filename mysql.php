@@ -35,14 +35,14 @@
 				return $return;
 			}
 			
-			/*public function selectUser($tabela, $colunas = "*", $where = "'acesso_idAcesso' = 'acesso_idAcesso'"){
+			public function selectUser($tabela, $colunas = "*", $where = "'acesso_idAcesso' = 'acesso_idAcesso'"){
 				$sql = "SELECT $colunas FROM $tabela $where";
 				$result = $this->executar($sql);
 				while($row = @mysql_fetch_array($result, MYSQL_ASSOC)){
 					$return[] = $row;
 				}
 				return $return;
-			}*/
+			}
 			
 			public function insert($tabela, $dados){
 				foreach($dados as $key => $value){
@@ -80,7 +80,7 @@
 				}
 			}
 			
-			/*public function deletar($tabela, $dados){
+			public function deletar($tabela, $dados){
 				foreach($dados as $key => $value){
 					$keys[] = $key;
 					$deletevalues[] = '\'' . $value . '\'';
@@ -91,7 +91,7 @@
 				$sql = "DELETE FROM $tabela WHERE idUsuario = $deletevalues";
 				
 				return $this->executar($sql);
-			}*/
+			}
 			
 			public function atualizaSenha($tabela, $dados){
 				foreach($dados as $key => $value){

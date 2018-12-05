@@ -33,7 +33,7 @@
 		
 			<?php
 				include 'global.php';
-				require_once 'mysql.php';
+				include 'mysql.php';
 				
 			?>
 		
@@ -52,7 +52,8 @@
 					</ul>
 				</div>
 			</nav>
-				
+			
+			//
 			<?php
 				
 				$con = new mysql();
@@ -82,7 +83,7 @@
 				</thead>
 				<tbody>
 					<?php
-						$consulta = mysql_query("SELECT * FROM tb_usuario");
+						$consulta = mysql_query("SELECT * FROM 'tb_usuario'");
 						while($campo = mysql_fetch_array($consulta)){						
 					?>
 					<tr>
@@ -112,7 +113,16 @@
 						</td>
 					</tr>
 				</tbody>
-			</table>
+			</table> 
+			
+			/*<?php
+				$consulta = $pdo->query("SELECT idUsuario, nome, usuario, senha, acesso_idAcesso, tb_grupo_idGrupo FROM tb_usuario;");
+				 
+				  
+				while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+					echo "Nome: {$linha['nome']} - Usuário: {$linha['usuario']}<br />";
+				}
+			?>*/
 			
 	</body>
 </html>
