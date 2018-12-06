@@ -12,15 +12,6 @@
 			
 			var $db, $conn;
 			
-			private $sql_ins = "";
-			private $sql_del = "";
-			private $tabela = "";
-			
-			public function __construct($tabela){
-				$this->tabela = $tabela;
-				return $this->tabela;
-			}
-			
 			public function __construct($server, $database, $username, $password){
 				$this->conn = @mysql_connect($server, $username, $password);
 				$this->db = @mysql_select_db($database, $this->conn);
@@ -55,29 +46,6 @@
 				$sql = "INSERT INTO $tabela ($keys) VALUES ($insertvalues)";
 				
 				return $this->executar($sql);
-			}
-			
-			public function excluir($where=null){
-				if($where){
-					$this->sql_sel = "SELECT * FROM";
-					$this->tabela = "WHERE $where";
-					$this->sql_del = "DELETE FROM ".$this->tabela."WHERE $where";					
-				}else{
-					$this->sql_sel = "SELECT * FROM " .$this->tabela;
-					$this->sql_del = "DELETE * FROM " .$this->tabela;
-				}
-				$sel = @mysql_query($this->sql_sel);
-				$regs = mysql_num_rows($sel);
-				
-				if($regs > 0){
-					if(!$this->del = mysql_query($this->sql_del)){
-						die("Erro na exclusão ".'<br>Linha: '.__LINE__. "<br><a href='deletar_Aluno.html'> Voltar ao Menu </a>");
-					}else{
-						print "Registro excluído com sucesso!<br><a href='deletar_Aluno.html'> Voltar ao Menu </a>");
-					}
-				}else{
-					print "Registro não encontrado!<br><a href='deletar_Aluno.html'> Voltar ao Menu </a>"
-				}
 			}
 			
 			public function deletar($tabela, $dados){

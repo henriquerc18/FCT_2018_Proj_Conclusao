@@ -25,6 +25,11 @@
 				return $select;
 			}
 			
+			public function verificaSenha($login, $senha, $novaSenha){
+				$select = $this->db->selectUser('sefa.tb_usuario', '*', " where usuario = '$usuario' and senha = '$senha' and senha = '$novaSenha'");
+				return $select;
+			}
+			
 			public function cadastraUsuario($dados){
 				$insert = $this->db->insert('tb_usuario', $dados);
 				return $insert;
@@ -36,7 +41,7 @@
 			}
 			
 			public function updateUsuario($dados){
-				$update = $this->db->atualizaSenha('tb_usuario', $dados);
+				$update = $this->db->atualizaSenha('sefa.tb_usuario', $dados);
 				return $update;
 			}
 		}

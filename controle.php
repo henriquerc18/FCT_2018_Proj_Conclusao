@@ -75,11 +75,14 @@
 			$login = $_POST['login'];
 			$senha = md5($_POST['senha']);
 			$novaSenha = md5($_POST['confirmaSenha']);
+			echo $login;
+			echo $senha;
+			echo $novaSenha;
 			$arr = array('usuario' => $login, 'senha' => $senha, 'senha' => $novaSenha);
-			if(!$controle->atualizaSenha($arr)){
+			if(!$controle->updateUsuario($arr)){
 				echo 'Aconteceu algum erro';
-			}else{
-				$acesso_idAcesso = $controle->updateUsuario();
+			}else if($controle->atualizaSenha($arr)){
+				$acesso_idAcesso = $controle->verificaSenha();
 				if($acesso_idAcesso[0]['acesso_idAcesso'] == 1){
 					header("Location: deletar_Aluno.html");
 				}else if($acesso_idAcesso[0]['acesso_idAcesso'] == 2){
