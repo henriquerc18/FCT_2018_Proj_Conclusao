@@ -56,7 +56,7 @@
 					header("Location: admin.html");
 				}
 			}
-		}else if(isset($_POST['Ok'])){
+		/*}else if(isset($_POST['Ok'])){
 			$tipo_usuario = $_POST['tipo_usuario'];
 			$arr = array('acesso_idAcesso' => $tipo_usuario);
 			if(!$controle->deletaUsuario($arr)){
@@ -70,8 +70,42 @@
 				}else if($acesso_idAcesso[0]['acesso_idAcesso'] == 3){
 					header("Location: deletar_Admin.html");
 				}
+			}*/
+		}else if (isset($_POST['esqueci_senha'])) {
+			$usr_id            = $_POST['login'];
+			$senha_nova        = md5(strip_tags($_POST['senha']));
+			$confirme_senha    = md5(strip_tags($_POST['confirmaSenha']));
+
+			$sql = mysql_query("SELECT senha FROM tb_usuario WHERE usuario = '$usr_id' ");
+			$row = mysql_fetch_array($sql);
+			$senha_banco = $row['senha'];
+
+			if($senha_nova == "" || $confirme_senha == "") {
+				echo "
+					<script>
+						alert('Os campos das senhas não podem ser nulos.');
+						window.location='../configuracoes.php';
+					</script>";
+			} else {
+				if (($senha_nova != $senha_banco) && ($senha_nova != $confirme_senha) ) {
+					echo "
+					<script>
+						alert('As senhas não conhecidem.');
+						window.location='../configuracoes.php';
+					</script>";
+				} else {
+					if ($result=mysql_query("UPDATE tb_usuario SET senha = '$confirme_senha' WHERE usuario = '$usr_id' ")) {
+						echo "
+					<script>
+						alert('Senha alterada com Sucesso!');
+					</script>";
+					}
+				}
 			}
-		}else if(isset($_POST['esqueci_senha'])){
+		}
+		
+		
+		/*else if(isset($_POST['esqueci_senha'])){
 			$login = $_POST['login'];
 			$senha = md5($_POST['senha']);
 			$novaSenha = md5($_POST['confirmaSenha']);
@@ -81,16 +115,14 @@
 			$arr = array('usuario' => $login, 'senha' => $senha, 'senha' => $novaSenha);
 			if(!$controle->updateUsuario($arr)){
 				echo 'Aconteceu algum erro';
-			}else if($controle->atualizaSenha($arr)){
-				$acesso_idAcesso = $controle->verificaSenha();
-				if($acesso_idAcesso[0]['acesso_idAcesso'] == 1){
-					header("Location: deletar_Aluno.html");
-				}else if($acesso_idAcesso[0]['acesso_idAcesso'] == 2){
-					header("Location: deletar_Coordenador.html");
-				}else if($acesso_idAcesso[0]['acesso_idAcesso'] == 3){
-					header("Location: deletar_Admin.html");
+			}else{
+				$verificaSenha = $controle->verificaSenha();
+				if($verificaSenha[0]['senha'] == $this->senha && $verificaSenha[0]['senha'] == $this->novaSenha){
+					$controle->updateUsuario();
+				}else{
+					"Erro na alteração da senha";
 				}
 			}
-		}
+		}*/
 	}
 ?>
