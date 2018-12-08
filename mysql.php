@@ -48,7 +48,7 @@
 				return $this->executar($sql);
 			}
 			
-			/*public function deletar($tabela, $dados){
+			public function deletar($tabela, $dados){
 				foreach($dados as $key => $value){
 					$keys[] = $key;
 					$deletevalues[] = '\'' . $value . '\'';
@@ -59,7 +59,7 @@
 				$sql = "DELETE FROM $tabela WHERE idUsuario = $deletevalues";
 				
 				return $this->executar($sql);
-			}*/
+			}
 			
 			public function atualizaSenha($tabela, $dados){
 				foreach($dados as $key => $value){

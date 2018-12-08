@@ -36,6 +36,7 @@
 			}
 			
 			public function deletaUsuario($dados){
+				echo "Tentando deletar";
 				$delete = $this->db->deletar('tb_usuario', $dados);
 				return $delete;
 			}

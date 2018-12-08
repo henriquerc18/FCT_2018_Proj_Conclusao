@@ -33,6 +33,7 @@
 		
 			<?php
 				include 'global.php';
+				echo "Oi";
 			?>
 		
 			<img style="margin-left: 0px; top: 0px; z-index: 2; position: absolute; width:81.15%; height:200px;transform: translateX(8.21%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
@@ -50,7 +51,9 @@
 					</ul>
 				</div>
 			</nav>
-				
+			<?php
+				echo "Oi";
+			?>
 			<div class="form_cad_aluno">
 				<style>
 					.form_cad_aluno {
@@ -66,9 +69,9 @@
 						
 						<label> Tipo de usuário: </label>
 						<select name="tipo_usuario" class="btn-primary" style="font-family: arial; margin-left: 80px; text-align: center;">
-							<option value="1" selected="selected" name="aluno" id="aluno"> Aluno(a) </option>
-							<option value="2" name="coordenador" id="coordenador"> Coordenador(a) </option>
-							<option value="3" name="admin" id="admin"> Administrador </option>
+							<option value="1" selected="selected"> Aluno(a) </option>
+							<option value="2" > Coordenador(a) </option>
+							<option value="3" > Administrador </option>
 						</select><br><br><br><br><br><br>
 						
 						<button type="submit" class="btn-primary" name="Ok" style="font-family: arial; margin-left: 80px; text-align: center;"> Ok </button><br><br>

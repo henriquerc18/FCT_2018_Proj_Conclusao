@@ -34,6 +34,7 @@
 			<?php
 				include 'global.php';
 				include 'mysql.php';
+				echo "Oi";
 				
 			?>
 		
@@ -53,8 +54,8 @@
 				</div>
 			</nav>
 			
-			//
-			<?php
+			
+			<!-- <?php
 				
 				$con = new mysql();
 				$con->connect();
@@ -65,7 +66,7 @@
 					echo 'Não conectou!';
 				}
 				
-			?>
+			?>-->
 			
 			<table style="margin-top: 300px; margin-left: 100px; border: 1px solid red;">
 				<thead>
@@ -83,7 +84,8 @@
 				</thead>
 				<tbody>
 					<?php
-						$consulta = mysql_query("SELECT * FROM 'tb_usuario'");
+						echo "Olá";
+						$consulta = mysql_query("SELECT * FROM 'sefa.tb_usuario'");
 						while($campo = mysql_fetch_array($consulta)){						
 					?>
 					<tr>
@@ -115,14 +117,7 @@
 				</tbody>
 			</table> 
 			
-			/*<?php
-				$consulta = $pdo->query("SELECT idUsuario, nome, usuario, senha, acesso_idAcesso, tb_grupo_idGrupo FROM tb_usuario;");
-				 
-				  
-				while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-					echo "Nome: {$linha['nome']} - Usuário: {$linha['usuario']}<br />";
-				}
-			?>*/
+						<?php } ?>
 			
 	</body>
 </html>
