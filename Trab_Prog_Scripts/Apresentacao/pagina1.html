@@ -17,8 +17,8 @@
 		<title> Login </title>
 		<link rel="stylesheet" type="text/css" href="SEFA.css" />
 		<link rel="stylesheet" href="Login_SEFA.css">
-		<link rel="stylesheet" type="text/css" href="js/bootstrap.min.js" />		
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />		
+		
 		 
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -35,19 +35,36 @@
 				include 'global.php';
 			?>
 		
-			<img style="margin-left: 0px; top: 0px; z-index: 2; position: absolute; width:81.15%; height:200px;transform: translateX(8.21%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
+			<img style="margin-left: 0px; position: absolute; width:81.15%; height:200px;transform: translateX(8.21%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
 
-			<nav class="menu" style="top:200px; transform: translateX(0%);">		
-				<div id='cssmenu'>
-					<ul>
-					   <li><a href='SEFA.html'> Home </a></li>
-					   <li><a href='Historia.html'> História </a></li>
-					   <li><a href='Programacao.html'> Programação </a></li>
-					   <li><a href='Contato_e_Localizacao.html'> Contato e Localização </a></li>
-					   <li class='active'><a href='pagina1.html'> Login </a></li>
-					</ul>
-				</div>
-			</nav>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: absolute; margin-top: 200px; width: 81.15%; transform: translateX(8.23%);">
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav" style="width: 100%;">
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="SEFA.html"> Home </a>
+					</li>					
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Historia.html"> História </a>
+					</li>					
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Programacao.html"> Programação </a>
+					</li>					
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Contato_e_Localizacao.html"> Contato e Localização </a>
+					</li>					
+					<li class="nav-item active" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Login_SEFA.html"> <b> Login </b> <span class="sr-only">(current)</span> </a>
+					</li>					
+				</ul>
+				
+			</div>
+			
+		</nav>
 			
 			<a href="Login_SEFA.html" style="margin-top: 500px;"> Sair </a>
 			

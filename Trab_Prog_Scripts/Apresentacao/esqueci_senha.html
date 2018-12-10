@@ -16,8 +16,9 @@
 		
 		<title> Esqueci minha senha </title>
 		<link rel="stylesheet" href="Login_SEFA.css">
-		<link rel="stylesheet" type="text/css" href="js/bootstrap.min.js" />		
-		<link rel="stylesheet" href="styles.css">
+				
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />		
+					
 		<link rel="stylesheet" type="text/css" href="SEFA.css" />
 		 
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -37,19 +38,34 @@
 			
 			<img style="margin-left: 0px; top: 0px; z-index: 2; position: absolute; width:81.15%; height:200px;transform: translateX(8.21%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
 
-			<nav class="menu" style="top:200px; transform: translateX(0%);">		
-				<div id='cssmenu'>
-					<ul>
-					   <li><a href='SEFA.html'> Home </a></li>
-					   <li><a href='Historia.html'> História </a></li>
-					   <li><a href='Programacao.html'> Programação </a></li>
-					   <li><a href='Livros.html'> Livros </a></li>
-					   <li><a href='Contato_e_Localizacao.html'> Contato e Localização </a></li>
-					   <li><a href='Noticias.html'> Notícias </a></li>
-					   <li class='active'><a href='esqueci_senha.html'> Login </a></li>
-					</ul>
-				</div>
-			</nav>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: absolute; margin-top: -120px; width: 81.15%; transform: translateX(8.23%);">
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav" style="width: 100%;">
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="SEFA.html"> Home </a>
+					</li>					
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Historia.html"> História </a>
+					</li>					
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Programacao.html"> Programação </a>
+					</li>					
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Contato_e_Localizacao.html"> Contato e Localização </a>
+					</li>					
+					<li class="nav-item active" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Login_SEFA.html"> <b> Login </b> <span class="sr-only">(current)</span> </a>
+					</li>					
+				</ul>
+				
+			</div>
+			
+		</nav>
 			
 			<div class="form_recupera_senha">
 				<style>
@@ -58,23 +74,23 @@
 					}
 				</style>
 					
-				<form action="controle.php" method="post" name="esqueciSenha" style="margin-left: 81.15px; width: 85.5%;">
+				<form action="controle.php" method="post" name="esqueciSenha" style="margin-left: 115px; width: 85.5%;">
 					<fieldset style="height: 250px;">
 						<legend style="color: orangered;"> Alterar Senha </legend>
 						
 						<label> Usuário: </label>
 						
-						<input type="text" class="form-control" name="login" style="margin-left: 30px;"><br><br>	
+						<input type="text" class="form-control" name="login" style="width: 35%; margin-left: 30px;"><br><br>	
 						
 						<label> Nova senha: </label>
 						
-						<input type="password" class="form-control" name="senha" style="margin-left: 30px;"><br><br>	
+						<input type="password" class="form-control" name="senha" style="width: 35%; margin-left: 30px;"><br><br>	
 					
 						<label> Confirme a senha: </label>
 					
-						<input type="password" class="form-control" name="confirmaSenha" style="margin-left: 30px;"><br><br>
+						<input type="password" class="form-control" name="confirmaSenha" style="width: 35%; margin-left: 30px;"><br><br>
 					
-						<button type="submit" name="esqueci_senha" class="btn-primary"> Alterar </button><br><br><br><br><br><br>
+						<button type="submit" style="background-color: orange;" name="esqueci_senha" class="btn-primary"> Alterar </button><br><br><br><br><br><br>
 				</form>
 			</div>
 	</body>
