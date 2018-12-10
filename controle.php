@@ -60,7 +60,7 @@
 			echo "Chegou no OK";
 			$tipo_usuario = $_POST['tipo_usuario'];
 			echo $tipo_usuario;
-			/*
+			
 			$arr = array('acesso_idAcesso' => $tipo_usuario);
 			if(!$controle->deletaUsuario($arr)){
 				echo 'Aconteceu algum erro';
@@ -74,7 +74,7 @@
 					header("Location: deletar_Admin.html");
 				}
 			}
-			*/
+			
 		}else if (isset($_POST['esqueci_senha'])) {
 			$usr_id            = $_POST['login'];
 			$senha_nova        = md5(strip_tags($_POST['senha']));
