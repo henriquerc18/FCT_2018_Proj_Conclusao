@@ -16,10 +16,8 @@
 		<link rel="stylesheet" type="text/css" href="SEFA.css" />
 		<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> -->
 		<link rel="stylesheet" type="text/css" href="scss/_carousel.scss" />
-		<link rel="stylesheet" type="text/css" href="js/bootstrap.min.js" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="styles.css">
-
 		 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -28,7 +26,7 @@
 		
 		<!-- Largura do espaço destinado ao carrossel que adapta-se a qualquer dispositivo -->
 		<style>
-			.carousel{z-index: 1; width:81.15%; margin-top: 48px; transform: translateX(11%);
+			.carousel{z-index: 1; width:81.15%; margin-top: -20px; transform: translateX(11%);
 			
 			}
 			<!-- Altura do espaço destinado ao carrossel -->
@@ -43,23 +41,48 @@
 			include 'global.php';
 		?>
 		
-		<!-- Menu com lista de botões -->
-		<nav class="menu" style="top:200px;">		
-			<div id='cssmenu'>
-				<ul>
-				   <li class='active'><a href='SEFA.html'> Home </a></li>
-				   <li><a href='Historia.html'> História </a></li>
-				   <li><a href='Programacao.html'> Programação </a></li>
-				   <li><a href='Livros.html'> Livros </a></li>
-				   <li><a href='Contato_e_Localizacao.html'> Contato e Localização </a></li>
-				   <li><a href='Noticias.html'> Notícias </a></li>
-				   <li><a href='Login_SEFA.html'> Login </a></li>
-				</ul>
-			</div>
-		</nav>
-	
 		<!-- Logo da SEFA localizado na parte superior de cada página -->
 		<img style="z-index: 2; position: relative; width:81.15%; height:200px;transform: translateX(11%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
+		
+		<!-- Menu com lista de botões -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: relative; width: 81.15%; top: 0px; transform: translateX(11%);">
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav" style="width: 100%;">
+					<li class="nav-item active" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="SEFA.html"> <b> Home </b><span class="sr-only">(current)</span></a>
+					</li>					
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Historia.html"> História </a>
+					</li>					
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Programacao.html"> Programação </a>
+					</li>	
+
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Livros.html"> Livros </a>
+					</li>
+						
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Contato_e_Localizacao.html"> Contato e Localização </a>
+					</li>					
+					
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Noticias.html"> Notícias </a>
+					</li>
+					
+					<li class="nav-item" style="width: 20%; text-align: center;">
+						<a class="nav-link" href="Login_SEFA.html"> Login </a>
+					</li>					
+				</ul>
+				
+			</div>
+			
+		</nav>
 		
 		<!-- Carrossel com 3 imagens da SEFA -->
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">

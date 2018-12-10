@@ -56,8 +56,11 @@
 					header("Location: admin.html");
 				}
 			}
-		/*}else if(isset($_POST['Ok'])){
+		}else if(isset($_POST['Ok'])){
+			echo "Chegou no OK";
 			$tipo_usuario = $_POST['tipo_usuario'];
+			echo $tipo_usuario;
+			/*
 			$arr = array('acesso_idAcesso' => $tipo_usuario);
 			if(!$controle->deletaUsuario($arr)){
 				echo 'Aconteceu algum erro';
@@ -70,7 +73,8 @@
 				}else if($acesso_idAcesso[0]['acesso_idAcesso'] == 3){
 					header("Location: deletar_Admin.html");
 				}
-			}*/
+			}
+			*/
 		}else if (isset($_POST['esqueci_senha'])) {
 			$usr_id            = $_POST['login'];
 			$senha_nova        = md5(strip_tags($_POST['senha']));
@@ -84,20 +88,21 @@
 				echo "
 					<script>
 						alert('Os campos das senhas não podem ser nulos.');
-						window.location='../configuracoes.php';
+						window.location='../esqueci_senha.html';
 					</script>";
 			} else {
 				if (($senha_nova != $senha_banco) && ($senha_nova != $confirme_senha) ) {
 					echo "
 					<script>
-						alert('As senhas não conhecidem.');
-						window.location='../configuracoes.php';
+						alert('As senhas não coincidem.');
+						window.location='esqueci_senha.html';
 					</script>";
 				} else {
 					if ($result=mysql_query("UPDATE tb_usuario SET senha = '$confirme_senha' WHERE usuario = '$usr_id' ")) {
 						echo "
 					<script>
 						alert('Senha alterada com Sucesso!');
+						window.location='Login_SEFA.html';
 					</script>";
 					}
 				}
