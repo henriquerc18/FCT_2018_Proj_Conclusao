@@ -61,7 +61,18 @@
 			$tipo_usuario = $_POST['tipo_usuario'];
 			echo $tipo_usuario;
 			
-			$arr = array('acesso_idAcesso' => $tipo_usuario);
+			$usuario = $controle->verificaUsuario($tipo_usuario);
+			if($usuario[0]['acesso_idAcesso'] == 1){
+				header("Location: devmedia.php");
+			}else if($usuario[0]['acesso_idAcesso'] == 2){
+				header("Location: deletar_Coordenador.html");
+			}else if($usuario[0]['acesso_idAcesso'] == 3){
+				header("Location: deletar_Admin.html");
+			}else{				
+				header("Location: pagina3.html");
+			}
+			
+			/*$arr = array('acesso_idAcesso' => $tipo_usuario);
 			if(!$controle->deletaUsuario($arr)){
 				echo 'Aconteceu algum erro';
 			}else{
@@ -73,7 +84,7 @@
 				}else if($acesso_idAcesso[0]['acesso_idAcesso'] == 3){
 					header("Location: deletar_Admin.html");
 				}
-			}
+			}*/
 			
 		}else if (isset($_POST['esqueci_senha'])) {
 			$usr_id            = $_POST['login'];
