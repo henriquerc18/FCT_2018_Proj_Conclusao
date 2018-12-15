@@ -1,5 +1,8 @@
-<!-- Nome: Henrique Rosa Carvalho -->
-<!-- Data: 11/10/2018 -->
+<!-- Escola Técnica Santo Inácio -->
+<!-- Projeto de Conclusão de Curso -->
+<!-- Sociedade Espírita Francisco de Assis (SEFA) -->
+<!-- Nome: Henrique Rosa Carvalho e Gabriel Suterio Pereira da Silva -->
+<!-- Data: 14/12/2018 -->
 
 
 

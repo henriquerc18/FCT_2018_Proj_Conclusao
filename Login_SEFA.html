@@ -1,8 +1,8 @@
 <!-- Escola Técnica Santo Inácio -->
-<!-- Feira de Ciências e Tecnologia/Projeto de Conclusão de Curso -->
+<!-- Projeto de Conclusão de Curso -->
 <!-- Sociedade Espírita Francisco de Assis (SEFA) -->
 <!-- Nome: Henrique Rosa Carvalho e Gabriel Suterio Pereira da Silva -->
-<!-- Data: 03/08/2018 -->
+<!-- Data: 14/12/2018 -->
 
 
 
@@ -17,7 +17,10 @@
 		<title> Login </title>
 		<link rel="stylesheet" type="text/css" href="SEFA.css" />
 		<link rel="stylesheet" href="Login_SEFA.css">		
+		
+		<!-- Arquivo Bootstrap para responsividade da página -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />		
+		
 		<link rel="stylesheet" type="text/css" href="styles.css" />		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		 
@@ -35,7 +38,7 @@
 			<?php
 				include 'global.php';
 			?>
-		
+			<!-- Logo da SEFA -->
 			<img style="margin-left: 0px; top: 0px; position: absolute; width:81.15%; height:200px; transform: translateX(11%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
 
 			<!-- Menu responsivo com lista de botões na horizontal-->
@@ -78,27 +81,7 @@
 				
 			</nav>
 			
-			<div class="form_login">
-				<style>
-					.form_login {
-						margin-top: 270px;
-						width: 100%;
-					}
-				</style>
-				<h4 style="margin-top: 130px; text-align: center;"> Login </h4>
-				<p style="text-align: center;"> Por favor, insira seu usuário e senha: </p><br>
-				
-				<form action="controle.php" method="post">
-			
-					<input type="text" style="width: 25%; transform: translateX(-10%);" class="form-control" name="login" placeholder="Usuário"><br><br>	
-				
-					<input type="password" style="width: 25%; transform: translateX(-10%);" class="form-control" name="senha" placeholder="Senha"><br><br>
-				
-					<a href="esqueci_senha.html" style="margin-left: 500px; width: 35%;"> Esqueceu sua senha? </a><br><br>
-					
-					<button type="submit" style="background-color: orange;"class="btn-primary" name="enviar" value="enviar" id="enviar"> Login </button><br><br><br><br><br><br>
-					
-				</form>		
+			<!-- Formulário de login -->
 			</div><div class="form_login">
 				<style>
 					.form_login {

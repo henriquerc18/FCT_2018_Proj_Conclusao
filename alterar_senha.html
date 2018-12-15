@@ -6,7 +6,7 @@
 
 
 
-<!DOCTYPE html>
+
 <html>
 	<head> 	
 	
@@ -14,14 +14,13 @@
 		<meta name = "description" content = "Sociedade Espírita Francisco de Assis, Sociedade Espírita, Francisco de Assis, SEFA" />
 		<meta name = "keywords" content = "Sociedade Espírita Francisco de Assis, Sociedade Espírita, Francisco de Assis, SEFA" />
 		
-		<title> Login </title>
-		<link rel="stylesheet" type="text/css" href="SEFA.css" />
+		<title> Esqueci minha senha </title>
 		<link rel="stylesheet" href="Login_SEFA.css">
 		
 		<!-- Arquivo Bootstrap para responsividade da página -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />		
-		
 		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="SEFA.css" />
 		 
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -37,12 +36,12 @@
 			<?php
 				include 'global.php';
 			?>
-		
+			
 			<!-- Logo da SEFA -->
-			<img style="margin-left: 0px; top: 0px; z-index: 2; position: absolute; width:81.15%; height:200px;transform: translateX(11%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
+			<img style="margin-left: 0px; top: 0px; z-index: 2; position: absolute; width:81.15%; height:200px;transform: translateX(8.21%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
 
 			<!-- Menu responsivo com lista de botões na horizontal-->
-			<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: relative; width: 81.15%; top: 200px; transform: translateX(11%);">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: relative; width: 85.58%; top: 170px; transform: translateX(8.21%);">
 				
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -80,12 +79,37 @@
 				</div>
 				
 			</nav>
-				
-			<!-- Imagem modelo p/ página de adição de conteúdo -->
-			<img style= "margin-left: 250px; margin-top: 256px; position: absolute; width:55%; height:376px;transform: translateX(8.21%)"; src="Trab_Prog_Scripts/Lorem_Ipsum.jpg" />
-			
-			<!-- Botão p/ direcionar p/ página de alteração de senha -->
-			<button class="btn-primary" onclick="window.open('alterar_senha.html');" target="_self" style="background-color: orange; margin-top: 300px; width: 10%; font-family: arial; margin-left: 150px; text-align: center;"> Alterar Senha </button><br><br><br><br><br><br>
-				
+			<!-- Formulário p/ alteração de senha -->
+			<div class="form_recupera_senha">
+				<style>
+					.form_recupera_senha {
+						margin-top: 260px;
+					}
+				</style>
+					
+				<form action="controle.php" method="post" name="esqueciSenha" style="margin-left: 150px; width: 35%;">
+					<fieldset style="height: 250px;">
+						<legend style="color: orangered;"> Alterar Senha </legend><br>
+						
+						<label> Usuário: </label>
+						
+						<input type="text" class="form-control" name="login" style="margin-left: 30px;"><br><br>
+
+						<label> Senha atual: </label>
+						
+						<input type="password" class="form-control" name="senha_atual" style="margin-left: 30px;"><br><br>
+						
+						<label> Nova senha: </label>
+						
+						<input type="password" class="form-control" name="senha" style="margin-left: 30px;"><br><br>	
+					
+						<label> Confirme a senha: </label>
+					
+						<input type="password" class="form-control" name="confirmaSenha" style="margin-left: 30px;"><br><br>
+					
+						<button type="submit" name="alterar_senha" class="btn-primary" style="background-color: orange; margin-left: 200px;"> Alterar </button><br><br><br><br><br><br>
+					</fieldset>
+				</form>
+			</div>
 	</body>
 </html>

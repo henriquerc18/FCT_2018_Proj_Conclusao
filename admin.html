@@ -1,9 +1,26 @@
 <!-- Escola Técnica Santo Inácio -->
-<!-- Feira de Ciências e Tecnologia/Projeto de Conclusão de Curso -->
+<!-- Projeto de Conclusão de Curso -->
 <!-- Sociedade Espírita Francisco de Assis (SEFA) -->
 <!-- Nome: Henrique Rosa Carvalho e Gabriel Suterio Pereira da Silva -->
-<!-- Data: 03/08/2018 -->
+<!-- Data: 14/12/2018 -->
 
+<?php 
+ /*Esse bloco de código em php verifica se existe a sessão, pois o usuário pode
+ simplesmente não fazer o login e digitar na barra de endereço do seu navegador 
+o caminho para a página principal do site (sistema), burlando assim a obrigação de 
+fazer um login, com isso se ele não estiver feito o login não será criado a session, 
+então ao verificar que a session não existe a página redireciona o mesmo
+ para a Login_SEFA.html.*/
+session_start();
+if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  unset($_SESSION['login']);
+  unset($_SESSION['senha']);
+  header('location:Login_SEFA.html');
+  }
+ 
+$logado = $_SESSION['login'];
+?>
 
 
 <!DOCTYPE html>
@@ -17,6 +34,8 @@
 		<title> Login </title>
 		<link rel="stylesheet" type="text/css" href="SEFA.css" />
 		<link rel="stylesheet" href="Login_SEFA.css">
+		
+		<!-- Arquivo Bootstrap para responsividade da página -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />		
 		<link rel="stylesheet" href="styles.css">
 		 
@@ -35,6 +54,7 @@
 				include 'global.php';
 			?>
 		
+			<!-- Logo da SEFA -->
 			<img style="margin-left: 0px; top: 0px; z-index: 2; position: absolute; width:81.15%; height:200px;transform: translateX(11%)"; src="img/Logo_24_09.png" alt="Logo Franciscano" title="Logo Franciscano" />
 
 			<!-- Menu responsivo com lista de botões na horizontal-->
@@ -77,6 +97,7 @@
 				
 			</nav>
 			
+			<!--  Sair da página -->
 			<a href="Login_SEFA.html" style="margin-top: 500px;"> Sair </a>
 			
 			<div class="cad_aluno">
@@ -86,14 +107,16 @@
 						width: 100%;
 					}
 				</style>
+				
 				<form action="controle.php" method="post" name="deletaUsuario">
 					<p style="font-family: arial; text-align: center;"> Selecione a opção desejada: </p><br>
 						
+					<!-- Lista de opções para o administrador -->
 					<button class="btn-primary" onclick="window.open('cad_usuario.html');" target="_self" style="background-color: orange; font-family: arial; margin-left: 540px; text-align: center;"> Cadastrar Usuário </button><br><br>
 					
 					<button class="btn-primary" onclick="window.open('deletar_Usuario.html');" target="_self" name="deletarUsuario;" style="background-color: orange; font-family: arial; margin-left: 540px; text-align: center;"> Remover Usuário </button><br><br>
 				
-					<button type="submit" class="btn-primary" style="background-color: orange; font-family: arial; margin-left: 540px; text-align: center;"> Adicionar Conteúdo </button><br><br>
+					<button type="submit" class="btn-primary" onclick="window.open('add_conteudo.html');" target="_self" style="background-color: orange; font-family: arial; margin-left: 540px; text-align: center;"> Adicionar Conteúdo </button><br><br>
 					
 					<button class="btn-primary" onclick="window.open('Login_SEFA.html');" target="_self" style="background-color: red; font-family: arial; margin-left: 540px; text-align: center;"> Cancelar </button><br><br>
 					
